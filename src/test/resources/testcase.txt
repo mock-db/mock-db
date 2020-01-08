@@ -1,0 +1,16 @@
+Mocks:
+
+Statement statement;
+ResultSet resultSet;
+PreparedStatement preparedStatement     ;
+
+Expectations in sequence:
+
+statement.executeQuery("SELECT * FROM table1"); result = resultSet;
+statement.executeQuery("SELECT * FROM table2"); times = 1; result =
+| id | name             | age |
+| 1  | Petri Silen      | 46  |
+| 2  | Petra Silen      | 43  |;
+
+statement.executeQuery("SELECT * FROM table3"); result = 1  ;
+statement.executeQuery("SELECT * FROM table4"); result = 1;
